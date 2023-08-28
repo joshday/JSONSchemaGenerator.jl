@@ -3,6 +3,17 @@ uuid = "8f52f367-0d47-4348-950d-c1630d0a9058"
 authors = ["Josh Day <emailjoshday@gmail.com> and contributors"]
 version = "1.0.0-DEV"
 
+[deps]
+AbstractTrees = "1520ce14-60c1-5f80-bbc7-55ef81b5835c"
+Catlab = "134e5e36-593f-5add-ad60-77f754baafbe"
+EasyConfig = "acab07b0-f158-46d4-8913-50acef6d41fe"
+EnumX = "4e289a0a-7415-4d19-859d-a7e5c4648b56"
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+JSONSchema = "7d188eb4-7ad8-530c-ae41-71a32a6d4692"
+OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
+StructTypes = "856f2bd8-1eba-4b0a-8007-ebc267875bd4"
+SyntacticModels = "22bb929c-8bcf-4852-b455-eb3e1675e09c"
+
 [compat]
 julia = "1"
 
