@@ -4,9 +4,12 @@ export make_schema, roundtrip
 
 using OrderedCollections, JSON3, StructTypes
 
-
 D = OrderedDict{Symbol, Any}
 d(; kw...) = D(kw...)
+
+
+
+
 
 roundtrip(x) = JSON3.read(JSON3.write(x))
 
@@ -24,9 +27,14 @@ gen(::StructTypes.DictType, x) = d(type = "object", properties = D(Symbol(k) => 
 
 gen(::StructTypes.SingletonType, x) = error("SingletonType not supported")
 
-# Everything else: roundtrip it to see what JSON3 does with it.
-gen(::Any, x) = gen(roundtrip(x))
+function gen(::StructTypes.DataType, x)
 
+end
+
+
+# # Maybe this is ok?
+# # Everything else: roundtrip it to see what JSON3 does with it.
+# gen(::Any, x) = gen(roundtrip(x))
 
 
 end
